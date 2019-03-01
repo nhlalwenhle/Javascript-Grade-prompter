@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title>Grade Scorer!</title>
+</head>
+<body style="text-align:center">
+<h1> Grade Score</h1>
+Enter a number between 0 and 1.<br />
+<input type="text" id="input"></input>
+<button onclick="GradeScore()">What's my Grade?</button>
+<hr>
+<span id="output"></span></span> 
+<script type="text/javascript">
+function GradeScore()
+{
+   var grade = document.getElementById('input').value; 
+   var result = document.getElementById('output');
+
+   if (grade >= 0.9 && grade <= 1) 
+   {
+       result.innerHTML = "A";
+   }
+   else if (grade >= 0.8 && grade <= 0.9)
+   {
+       result.innerHTML = "B";
+   }
+   else if (grade >= 0.7 && grade <= 0.8) 
+   {
+       result.innerHTML = "C";
+   }
+   else if (grade >= 0.6 && grade <= 0.7)
+   {
+       result.innerHTML = "D";
+   }
+   else if (grade < 0.6)
+   { 
+       result.innerHTML = "F";
+   }
+   else 
+   {
+     window.alert("invalid grade. Please enter a number between 0-1.");  
+   }   
+}
+</script>
+
+</body>
+</html>
